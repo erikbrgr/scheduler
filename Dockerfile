@@ -1,4 +1,7 @@
 FROM alpine:3.15
+# FROM python:3.10-alpine
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/repo.huaweicloud.com/g' /etc/apk/repositories
 
 # Install required packages
 RUN apk add --update --no-cache bash dos2unix
